@@ -1,0 +1,16 @@
+<script lang="ts" setup >
+import {defineProps,defineEmits,Ref,ref} from 'vue'
+    const props= defineProps({
+        title:String,
+        content:String
+    })
+
+    const emit= defineEmits(['sayHi'])
+
+    const handleClick = () => {
+            emit('sayHi',message.value)
+    }
+        let message:Ref<string>=ref("")
+
+
+</script>
